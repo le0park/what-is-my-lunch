@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 /**
  *
@@ -18,6 +18,8 @@ const Question = ({
     onNext = (type, score) => console.error("onNext not defined: " + type + ", " + score),
     last = false
                   }) => {
+    const [score, setScore] = useState(0);
+
     return (
         <div>
             <h3>{text}</h3>
@@ -25,14 +27,14 @@ const Question = ({
                 <ul>
                     <li>
                         <label>{a.text}</label>
-                        <input type="radio" id={`answer_${index}`} />
+                        <input type="radio" id={`answer_${index}`} onChange={() => setScore(a.score)}/>
                     </li>
                 </ul>
             ))}
 
-            {last
-                ? (<button type="button">결과보기</button>)
-                : (<button type="button">선택</button>)}
+            <button type="button" onClick={() => onNext(type, score)}>
+                {last ? '결과보기' : '선택'}
+            </button>
         </div>
     );
 };
