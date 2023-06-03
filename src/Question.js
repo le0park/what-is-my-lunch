@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Button from "react-bootstrap/Button";
 
 /**
  *
@@ -32,9 +33,9 @@ const Question = ({
                 </ul>
             ))}
 
-            <button type="button" onClick={() => onNext(type, score)}>
-                {last ? '결과보기' : '선택'}
-            </button>
+            <Button variant="primary" onClick={() => onNext(type, score)}>
+                {last ? '결과보기' : '다음'}
+            </Button>
         </div>
     );
 };
