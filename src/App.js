@@ -48,14 +48,14 @@ function App() {
         }));
 
         if (answerState.currentQuestion === questions.length) {
-            history.push("/result");
+            history.push("/what-is-my-lunch/result");
         } else {
-            history.push("/" + (answerState.currentQuestion + 1));
+            history.push("/what-is-my-lunch/" + (answerState.currentQuestion + 1));
         }
     };
 
     useEffect(() => {
-        if (location.pathname === "/") {
+        if (location.pathname === "/what-is-my-lunch/") {
             initialize();
         }
     }, [location?.pathname]);
@@ -73,7 +73,7 @@ function App() {
                                         transitionKey={location.pathname}
                                     >
                                         <Switch location={location}>
-                                            <Route exact path="/">
+                                            <Route exact path="/what-is-my-lunch/">
                                                 <DialogCard
                                                     header="⭐ 메뉴 정하기 ⭐"
                                                     title="메뉴 정하기"
@@ -82,12 +82,12 @@ function App() {
                                                     </>)}
                                                     footer={(
                                                         <div className="d-flex justify-content-center">
-                                                            <Link to="/1" className="me-2">
+                                                            <Link to="/what-is-my-lunch/1" className="me-2">
                                                                 <Button variant="primary" onClick={() => setAnswerType(TYPE_RESTAURANT)}>
                                                                     식당 추천받기 (방배)
                                                                 </Button>
                                                             </Link> <br/>
-                                                            <Link to="/1" >
+                                                            <Link to="/what-is-my-lunch/1" >
                                                                 <Button variant="primary" onClick={() => setAnswerType(TYPE_FOOD)}>
                                                                     음식 추천받기 (지도 검색)
                                                                 </Button>
@@ -97,7 +97,7 @@ function App() {
                                                 />
                                             </Route>
                                             {questions && questions.map(({text, type, answers}, index) => (
-                                                <Route exact path={"/" + (index + 1)} key={type}>
+                                                <Route exact path={"/what-is-my-lunch/" + (index + 1)} key={type}>
                                                     <DialogCard
                                                         header={"질문 " + (index + 1)}
                                                         content={(
@@ -112,14 +112,14 @@ function App() {
                                                     />
                                                 </Route>
                                             ))}
-                                            <Route exact path="/result">
+                                            <Route exact path="/what-is-my-lunch/result">
                                                 <DialogCard
                                                     header="결과"
                                                     content={(
                                                         <Result type={answerState.type} filters={filters} />
                                                     )}
                                                     footer={(
-                                                        <Link variant="primary" to="/" component={Button}>
+                                                        <Link variant="primary" to="/what-is-my-lunch/" component={Button}>
                                                             👈첫페이지로
                                                         </Link>
                                                     )}
