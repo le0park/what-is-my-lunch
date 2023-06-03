@@ -1,8 +1,8 @@
 import React, {useMemo} from 'react';
 import foods from './static/foods.json'
 import restaurants from './static/restaurants.json';
-import {TYPE_FOOD, TYPE_RESTAURANT} from "./variables";
-import Button from "react-bootstrap/Button";
+import {TYPE_FOOD, TYPE_RESTAURANT} from './variables';
+import Button from 'react-bootstrap/Button';
 
 /**
  *
@@ -38,8 +38,8 @@ const Result = ({ type, filters = []}) => {
                 result.map(r => (
                     <div key={r.name} className="d-grid gap-2">
                         <a href={`https://map.naver.com/v5/search/${r.name}`} target="_blank" >
-                            <Button variant="outline-primary" className="w-100">{r.name}</Button>
-                        </a> <br />
+                            <Button variant="outline-primary" className="w-100 mb-3">{r.name}</Button>
+                        </a>
                     </div>
                 ))
             );
@@ -47,14 +47,21 @@ const Result = ({ type, filters = []}) => {
         case TYPE_RESTAURANT: {
             return (
                 result.map(r => (
-                    <div key={r.name} className="d-flex flex-column">
+                    <div key={r.name} className="d-grid gap-2">
                         <a href={`https://map.naver.com/v5/search/${r.name}`} target="_blank">
-                            <Button variant="outline-primary" className="w-100">
+                            <Button variant="outline-primary" className="w-100 mb-3">
                                 {r.name}<br/>
-                                {r.recommends?.map(f => <>{f.name} </>)}
+                                {r.recommends?.map((f, idx) => {
+                                    let content = f.name;
+                                     if (idx !== r.recommends.length - 1) {
+                                         content += ' / ';
+                                     }
+
+                                     return content;
+                                })}
                             </Button>
                             <br />
-                        </a> <br />
+                        </a>
                     </div>
                 ))
             );
