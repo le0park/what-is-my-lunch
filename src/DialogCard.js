@@ -25,9 +25,11 @@ const DialogCard = ({
                 {title && title.length > 0 && (
                     <Card.Title>{title}</Card.Title>
                 )}
-                <Card.Text>
+
+                <div className="mb-3">
                     {content}
-                </Card.Text>
+                </div>
+
                 {footer}
             </Card.Body>
         </Card>
