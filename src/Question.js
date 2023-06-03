@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import Button from "react-bootstrap/Button";
-import {ButtonGroup, ToggleButton} from "react-bootstrap";
+import {Alert, ToggleButton} from "react-bootstrap";
 
 /**
  *
@@ -10,6 +10,7 @@ import {ButtonGroup, ToggleButton} from "react-bootstrap";
  * @param {string} answers.text
  * @param {number} answers.score
  * @param {function} onNext
+ * @param {boolean} last
  * @returns {JSX.Element}
  * @constructor
  */
@@ -21,9 +22,22 @@ const Question = ({
     last = false
                   }) => {
     const [score, setScore] = useState(0);
+    const [alert, setAlert] = useState(false);
+
+    const handleNext = useCallback(() => {
+        if (score === 0) {
+            setAlert(true);
+        } else {
+            onNext(type, score);
+        }
+    }, [onNext, score, type]);
 
     return (
         <div>
+            {alert && (<Alert variant="danger">
+                응답을 먼저 선택해주세요!
+            </Alert>)}
+
             <h4 className="mb-4">{text}</h4>
             <div className="d-flex flex-column mb-3">
                 {answers.map((a, idx) => (
@@ -43,7 +57,7 @@ const Question = ({
                     </>
                 ))}
             </div>
-            <Button variant="primary" onClick={() => onNext(type, score)}>
+            <Button variant="primary" onClick={handleNext}>
                 {last ? '결과보기' : '다음'}
             </Button>
         </div>
