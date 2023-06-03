@@ -27,7 +27,7 @@ const Question = ({
                 <ul>
                     <li>
                         <label>{a.text}</label>
-                        <input type="radio" id={`answer_${index}`} onChange={() => setScore(a.score)}/>
+                        <input type="radio" name="answer" onClick={() => setScore(a.score)}/>
                     </li>
                 </ul>
             ))}
