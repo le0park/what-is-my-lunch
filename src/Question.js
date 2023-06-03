@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Button from "react-bootstrap/Button";
+import {ButtonGroup, ToggleButton} from "react-bootstrap";
 
 /**
  *
@@ -23,16 +24,25 @@ const Question = ({
 
     return (
         <div>
-            <h3>{text}</h3>
-            {answers.map((a, index) => (
-                <ul>
-                    <li>
-                        <label>{a.text}</label>
-                        <input type="radio" name="answer" onClick={() => setScore(a.score)}/>
-                    </li>
-                </ul>
-            ))}
-
+            <h4 className="mb-4">{text}</h4>
+            <div className="d-flex flex-column mb-3">
+                {answers.map((a, idx) => (
+                    <>
+                        <ToggleButton
+                            key={idx}
+                            id={`answer-${idx}`}
+                            type="radio"
+                            variant="outline-success"
+                            name="answer"
+                            value={a.score}
+                            checked={score === a.score}
+                            onChange={() => setScore(a.score)}
+                        >
+                            {a.text}
+                        </ToggleButton>
+                    </>
+                ))}
+            </div>
             <Button variant="primary" onClick={() => onNext(type, score)}>
                 {last ? '결과보기' : '다음'}
             </Button>
