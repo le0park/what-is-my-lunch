@@ -1,0 +1,43 @@
+[
+    {
+        "name": "떡볶이",
+        "description": "스트레스를 한번에 날려주는 실패하지 않는 음식!",
+        "scores": {
+            "stress": 10,
+            "diet": 10
+        },
+        "calories": 0,
+        "images": []
+    },
+    {
+        "name": "서브웨이 스테이크&치즈",
+        "map_query": "서브웨이",
+        "description": "이것만 먹으면 칼로리가 의외로 낮은 서브웨이 시그니처",
+        "scores": {
+            "stress": 10,
+            "diet": 0
+        },
+        "calories": 0,
+        "images": []
+    },
+    {
+        "name": "파스타",
+        "description": "기분 내고 싶은 날에 맛있는 파스타",
+        "scores": {
+            "stress": 0,
+            "diet": 10
+        },
+        "calories": 0,
+        "images": []
+    },
+    {
+        "name": "샐러드",
+        "description": "다이어트를 준비하고 있다면 샐러드",
+        "scores": {
+            "stress": 0,
+            "diet": 0
+        },
+        "calories": 0,
+        "images": []
+    }
+]
