@@ -37,7 +37,7 @@ const Result = ({ type, filters = []}) => {
             return (
                 result.map(r => (
                     <div key={r.name} className="d-grid gap-2">
-                        <a href={`https://map.naver.com/v5/search/${r.name}`} target="_blank" >
+                        <a href={`https://map.naver.com/v5/search/${r.name}`} target="_blank" rel="noreferrer">
                             <Button variant="outline-primary" className="w-100 mb-3">{r.name}</Button>
                         </a>
                     </div>
@@ -48,7 +48,7 @@ const Result = ({ type, filters = []}) => {
             return (
                 result.map(r => (
                     <div key={r.name} className="d-grid gap-2">
-                        <a href={`https://map.naver.com/v5/search/${r.name}`} target="_blank">
+                        <a href={`https://map.naver.com/v5/search/${r.name}`} target="_blank" rel="noreferrer">
                             <Button variant="outline-primary" className="w-100 mb-3">
                                 {r.name}<br/>
                                 {r.recommends?.map((f, idx) => {
