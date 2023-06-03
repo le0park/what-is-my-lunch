@@ -31,11 +31,32 @@ const Result = ({ type, filters = []}) => {
         return result;
     } ,[data, filters]);
 
-    return (result.map(r => (
-        <Fragment key={r.name}>
-            {r.name} / {r.recommends?.map(f => <>{f.name} </>)} <br />
-        </Fragment>
-    )));
+    switch(type) {
+        case TYPE_FOOD: {
+            return (
+                result.map(r => (
+                    <Fragment key={r.name}>
+                        <a href={`https://map.naver.com/v5/search/${r.name}`} target="_blank">
+                            {r.name}
+                        </a> <br />
+                    </Fragment>
+                ))
+            );
+        }
+        case TYPE_RESTAURANT: {
+            return (
+                result.map(r => (
+                    <Fragment key={r.name}>
+                        <a href={`https://map.naver.com/v5/search/${r.name}`} target="_blank">
+                            {r.name} / {r.recommends?.map(f => <>{f.name} </>)} <br />
+                        </a> <br />
+                    </Fragment>
+                ))
+            );
+        }
+        default:
+            return <></>;
+    }
 };
 
 export default Result;
