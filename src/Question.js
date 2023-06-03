@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {Fragment, useCallback, useState} from 'react';
 import Button from "react-bootstrap/Button";
 import {Alert, ToggleButton} from "react-bootstrap";
 
@@ -41,7 +41,7 @@ const Question = ({
             <h4 className="mb-4">{text}</h4>
             <div className="d-flex flex-column mb-3">
                 {answers.map((a, idx) => (
-                    <>
+                    <Fragment key={idx}>
                         <ToggleButton
                             key={idx}
                             id={`answer-${idx}`}
@@ -54,7 +54,7 @@ const Question = ({
                         >
                             {a.text}
                         </ToggleButton>
-                    </>
+                    </Fragment>
                 ))}
             </div>
             <Button variant="primary" onClick={handleNext}>

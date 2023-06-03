@@ -5,11 +5,13 @@ import './App.css';
 import Question from './Question';
 import Result from './Result';
 import questions from './static/questions';
-import {Col, Container, Row} from "react-bootstrap";
-import Button from "react-bootstrap/Button";
+import {Col, Container, Row} from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
 import DialogCard from "./DialogCard";
+import {TYPE_FOOD, TYPE_RESTAURANT} from "./variables";
 
 const initAnswerState = {
+    type: "",
     currentQuestion: 1,
     scores: {},
 };
@@ -28,8 +30,16 @@ function App() {
         setAnswerState(initAnswerState);
     };
 
+    const setAnswerType = (type) => {
+        setAnswerState({
+            ...initAnswerState,
+            type,
+        });
+    }
+
     const acceptAnswer = (type, score) => {
-        setAnswerState((old) => console.log(old.scores[type]) || ({
+        setAnswerState((old) => ({
+            ...old,
             currentQuestion: old.currentQuestion + 1,
             scores: {
                 ...old.scores,
@@ -71,9 +81,18 @@ function App() {
                                                         📃 선택지와 함께 오늘의 메뉴를 정해보세요 ~
                                                     </>)}
                                                     footer={(
-                                                        <Link to="/1" variant="primary" component={Button}>
-                                                            ⭐시작하기
-                                                        </Link>
+                                                        <div className="d-flex justify-content-center">
+                                                            <Link to="/1" className="me-2">
+                                                                <Button variant="primary" onClick={() => setAnswerType(TYPE_RESTAURANT)}>
+                                                                    식당 추천받기 (방배)
+                                                                </Button>
+                                                            </Link> <br/>
+                                                            <Link to="/1" >
+                                                                <Button variant="primary" onClick={() => setAnswerType(TYPE_FOOD)}>
+                                                                    음식 추천받기 (지도 검색)
+                                                                </Button>
+                                                            </Link>
+                                                        </div>
                                                     )}
                                                 />
                                             </Route>
@@ -97,7 +116,7 @@ function App() {
                                                 <DialogCard
                                                     header="결과"
                                                     content={(
-                                                        <Result filters={filters} />
+                                                        <Result type={answerState.type} filters={filters} />
                                                     )}
                                                     footer={(
                                                         <Link variant="primary" to="/" component={Button}>

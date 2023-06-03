@@ -1,0 +1,373 @@
+[
+  {
+    "name": "고양이부엌",
+    "url": "",
+    "description": "스트레스를 한번에 날려주는 실패하지 않는 음식!",
+    "recommends": [
+      {
+        "name": "떡볶이",
+        "images": [""]
+      }
+    ],
+    "scores": {
+      "stress": 10,
+      "diet": -10
+    },
+    "calories": 0,
+    "images": []
+  },
+  {
+    "name": "마토이",
+    "description": "오마카세 설명",
+    "recommends": [
+      {
+        "name": "오마카세 (3.5)",
+        "images": [""]
+      },
+      {
+        "name": "에비동",
+        "images": [""]
+      },
+      {
+        "name": "규동",
+        "images": [""]
+      },
+      {
+        "name": "사케동",
+        "images": [""]
+      },
+      {
+        "name": "회덮밥",
+        "images": [""]
+      }
+    ],
+    "scores": {
+      "stress": 10,
+      "diet": -10
+    },
+    "calories": 0,
+    "images": []
+  },
+  {
+    "name": "이누식당",
+    "description": "기분 내고 싶은 날에 맛있는 파스타",
+    "recommends": [
+      {
+        "name": "파스타",
+        "images": [""]
+      }
+    ],
+    "scores": {
+      "stress": 10,
+      "diet": -10
+    },
+    "calories": 0,
+    "images": []
+  },
+  {
+    "name": "미국식",
+    "description": "스트레스를 한번에 날려주는 실패하지 않는 음식!",
+    "recommends": [
+      {
+        "name": "수제버거",
+        "images": [""]
+      }
+    ],
+    "scores": {
+      "stress": 10,
+      "diet": -10
+    },
+    "calories": 0,
+    "images": []
+  },
+  {
+    "name": "자스민",
+    "description": "스트레스를 한번에 날려주는 실패하지 않는 음식!",
+    "recommends": [
+      {
+        "name": "피칸정과",
+        "images": [""]
+      },
+      {
+        "name": "호두정과",
+        "images": [""]
+      }
+    ],
+    "scores": {
+      "stress": 10,
+      "diet": 10
+    },
+    "calories": 0,
+    "images": []
+  },
+  {
+    "name": "마토이",
+    "description": "다이어트를 준비하고 있다면 샐러드",
+    "recommends": [
+      {
+        "name": "사시미 샐러드",
+        "images": [""]
+      },
+      {
+        "name": "연어 샐러드",
+        "images": [""]
+      },
+      {
+        "name": "해산물 샐러드",
+        "images": [""]
+      },
+      {
+        "name": "낫또와 참치",
+        "images": [""]
+      }
+    ],
+    "scores": {
+      "stress": -10,
+      "diet": 10
+    },
+    "calories": 0,
+    "images": []
+  },
+  {
+    "name": "브레덴코",
+    "description": "다이어트를 준비하고 있다면 샐러드",
+    "recommends": [
+      {
+        "name": "구운 마늘 쉬림프",
+        "images": [""]
+      },
+      {
+        "name": "시저 샐러드",
+        "images": [""]
+      },
+      {
+        "name": "콩&단호박샐러드",
+        "images": [""]
+      },
+      {
+        "name": "튀긴두부 샐러드",
+        "images": [""]
+      }
+    ],
+    "scores": {
+      "stress": -10,
+      "diet": 10
+    },
+    "calories": 0,
+    "images": []
+  },
+  {
+    "name": "델 젤라띠아",
+    "description": "다이어트를 준비하고 있다면 샐러드",
+    "recommends": [
+      {
+        "name": "샐러드 + 젤라또",
+        "images": [""]
+      }
+    ],
+    "scores": {
+      "stress": 10,
+      "diet":  10
+    },
+    "calories": 0,
+    "images": []
+  },
+  {
+    "name": "보스 베이글웍스 방배",
+    "description": "다이어트를 준비하고 있다면 샐러드",
+    "recommends": [
+      {
+        "name": "베이글 + 라떼",
+        "images": [""]
+      }
+    ],
+    "scores": {
+      "stress": 10,
+      "diet": 10
+    },
+    "calories": 0,
+    "images": []
+  },
+  {
+    "name": "해브커피",
+    "description": "다이어트를 준비하고 있다면 샐러드",
+    "recommends": [
+      {
+        "name": "잼 버터스콘",
+        "images": [""]
+      },
+      {
+        "name": "착즙주스",
+        "images": [""]
+      }
+    ],
+    "scores": {
+      "stress": 10,
+      "diet": 10
+    },
+    "calories": 0,
+    "images": []
+  },
+  {
+    "name": "파티시안",
+    "description": "디저트",
+    "recommends": [
+      {
+        "name": "푀이앙틴초코",
+        "images": [""]
+      },
+      {
+        "name": "타르트",
+        "images": [""]
+      },
+      {
+        "name": "쇼콜라쇼",
+        "images": [""]
+      }
+    ],
+    "scores": {
+      "stress": 10,
+      "diet": 10
+    },
+    "calories": 0,
+    "images": []
+  },
+  {
+    "name": "스타벅스",
+    "description": "디저트",
+    "recommends": [
+      {
+        "name": "샌드위치",
+        "images": [""]
+      }
+    ],
+    "scores": {
+      "stress": 10,
+      "diet": 10
+    },
+    "calories": 0,
+    "images": []
+  },
+  {
+    "name": "베스킨라빈스",
+    "description": "디저트",
+    "scores": {
+      "stress": 10,
+      "diet": 10
+    },
+    "calories": 0,
+    "images": []
+  },
+  {
+    "name": "KangChefStory",
+    "description": "디저트",
+    "recommends": [
+      {
+        "name": "타코와사비",
+        "images": [""]
+      }
+    ],
+    "scores": {
+      "stress": 10,
+      "diet": 10
+    },
+    "calories": 0,
+    "images": []
+  },
+  {
+    "name": "테일",
+    "description": "디저트",
+    "recommends": [
+      {
+        "name": "고급 디저트",
+        "images": [""]
+      },
+      {
+        "name": "밀크티",
+        "images": [""]
+      },
+      {
+        "name": "솔티드 카라멜 라떼",
+        "images": [""]
+      }
+    ],
+    "scores": {
+      "stress": 10,
+      "diet": 10
+    },
+    "calories": 0,
+    "images": []
+  },
+  {
+    "name": "서브웨이",
+    "description": "이것만 먹으면 칼로리가 의외로 낮은 서브웨이 시그니처",
+    "recommends": [
+      {
+        "name": "스테이크&치즈",
+        "images": [""]
+      }
+    ],
+    "scores": {
+      "stress": 10,
+      "diet": -10
+    },
+    "calories": 0,
+    "images": []
+  },
+  {
+    "name": "서리풀명가",
+    "description": "이것만 먹으면 칼로리가 의외로 낮은 서브웨이 시그니처",
+    "recommends": [
+      {
+        "name": "김치찌개",
+        "images": [""]
+      },
+      {
+        "name": "된장찌개",
+        "images": [""]
+      },
+      {
+        "name": "갈비탕",
+        "images": [""]
+      }
+    ],
+    "scores": {
+      "stress": -10,
+      "diet": -10
+    },
+    "calories": 0,
+    "images": []
+  },
+  {
+    "name": "보리식당",
+    "description": "이것만 먹으면 칼로리가 의외로 낮은 서브웨이 시그니처",
+    "recommends": [
+      {
+        "name": "김치찌개",
+        "images": [""]
+      },
+      {
+        "name": "쭈꾸미덮밥",
+        "images": [""]
+      },
+      {
+        "name": "제육덮밥",
+        "images": [""]
+      },
+      {
+        "name": "비빔국수",
+        "images": [""]
+      },
+      {
+        "name": "멸치국수",
+        "images": [""]
+      }
+    ],
+    "scores": {
+      "stress": -10,
+      "diet": -10
+    },
+    "calories": 0,
+    "images": []
+  }
+]
