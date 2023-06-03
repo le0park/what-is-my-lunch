@@ -1,7 +1,8 @@
-import React, {Fragment, useMemo} from 'react';
+import React, {useMemo} from 'react';
 import foods from './static/foods.json'
 import restaurants from './static/restaurants.json';
 import {TYPE_FOOD, TYPE_RESTAURANT} from "./variables";
+import Button from "react-bootstrap/Button";
 
 /**
  *
@@ -35,22 +36,26 @@ const Result = ({ type, filters = []}) => {
         case TYPE_FOOD: {
             return (
                 result.map(r => (
-                    <Fragment key={r.name}>
-                        <a href={`https://map.naver.com/v5/search/${r.name}`} target="_blank">
-                            {r.name}
+                    <div key={r.name} className="d-grid gap-2">
+                        <a href={`https://map.naver.com/v5/search/${r.name}`} target="_blank" >
+                            <Button variant="outline-primary" className="w-100">{r.name}</Button>
                         </a> <br />
-                    </Fragment>
+                    </div>
                 ))
             );
         }
         case TYPE_RESTAURANT: {
             return (
                 result.map(r => (
-                    <Fragment key={r.name}>
+                    <div key={r.name} className="d-flex flex-column">
                         <a href={`https://map.naver.com/v5/search/${r.name}`} target="_blank">
-                            {r.name} / {r.recommends?.map(f => <>{f.name} </>)} <br />
+                            <Button variant="outline-primary" className="w-100">
+                                {r.name}<br/>
+                                {r.recommends?.map(f => <>{f.name} </>)}
+                            </Button>
+                            <br />
                         </a> <br />
-                    </Fragment>
+                    </div>
                 ))
             );
         }
